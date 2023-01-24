@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class Book(models.Model):
     title = models.CharField(max_length=100)
-    num_of_pages = models.IntegerField()
+    number_of_pages = models.IntegerField()
     publish_date = models.DateField()
     quantity = models.IntegerField()
     
