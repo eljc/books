@@ -1,9 +1,9 @@
 from django.contrib import admin
 from django.urls import path
-from book_api.views import book_list, book_create, book
+from book_api.views import BookList, BookCreate, BookDetail
 
 urlpatterns = [
-    path('list/', book_list),
-    path('', book_create),
-    path('<int:pk>', book)
+    path('list/', BookList.as_view()),
+    path('', BookCreate.as_view()),
+    path('<int:id>', BookDetail.as_view())
 ]
